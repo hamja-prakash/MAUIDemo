@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolbar="clr-namespace:MAUISampleDemo.View.FieldModifier"
+    NavigationPage.HasNavigationBar="True">
+
+    <ScrollView>
+        <Grid
+            Margin="0"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="20"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <toolbar:CommonToolbarView
+                x:Name="CommonToolbar"
+                x:FieldModifier="Public"
+                HorizontalOptions="FillAndExpand" />
+
+            <Frame
+                x:Name="FrmMVVMDemo"
+                Grid.Row="1"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="MVVM Demo"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmMVVMDemo_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame
+                x:Name="FrmDevice_APPInfo"
+                Grid.Row="2"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Device &amp; App Info"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmDeviceandAPPInfo_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame
+                x:Name="FrmFiledModifiers"
+                Grid.Row="3"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Field Modifiers"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmFiledModifiers_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame
+                x:Name="FrmObservableProperty"
+                Grid.Row="4"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="ObservableProperty Demo"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmObservableProperty_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame
+                x:Name="FrmScanner"
+                Grid.Row="5"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Scanner Demo"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmScanner_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
